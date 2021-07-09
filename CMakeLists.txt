@@ -7,6 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+#find_package(rclcpp REQUIRED)
 
 add_library(ros2_galactic_waveshare_adc_lib SHARED
             src/ADS1256.c
@@ -19,6 +20,8 @@ target_include_directories(ros2_galactic_waveshare_adc_lib PUBLIC
   
 #ament_export_interfaces(export_ros2_galactic_waveshare_adc_lib HAS_LIBRARY_TARGET)
 ament_export_targets(export_ros2_galactic_waveshare_adc_lib HAS_LIBRARY_TARGET)
+
+#ament_export_dependencies(ros2_galactic_waveshare_adc_lib)
 
 install(
   DIRECTORY include/
